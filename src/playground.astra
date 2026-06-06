@@ -1,0 +1,8 @@
+// Astra Playground — write your code here!
+fn main() -> int {
+    output("Welcome to Astra!");
+    output("Hello");
+    output(5+3);
+    output("Working Good");
+    return 0;
+}

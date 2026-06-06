@@ -1,4 +1,5 @@
 .DS_Store
 astra
-*.o
-*.out
+program_out
+build/
+compile_commands.json

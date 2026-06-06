@@ -1,0 +1,37 @@
+// Astra Test: Variables and types
+fn main() -> int {
+    // Integer types
+    let int->x = 42;
+    mut int->y = 10;
+
+    output(x);   // 42
+    output(y);   // 10
+
+    // Mutation
+    y = 20;
+    output(y);   // 20
+
+    // Float
+    let f64->pi = 3.14159;
+    output(pi);  // 3.14159
+
+    // Boolean
+    let bool->flag = true;
+
+    // String
+    let str->msg = "Hello, Astra!";
+    output(msg);  // Hello, Astra!
+
+    // Char
+    let char->c = 'A';
+    output(c);    // A
+
+    // Compound assignment
+    mut int->z = 5;
+    z += 3;
+    output(z);    // 8
+    z *= 2;
+    output(z);    // 16
+
+    return 0;
+}

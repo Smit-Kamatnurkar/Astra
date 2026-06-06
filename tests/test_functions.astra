@@ -1,0 +1,46 @@
+// Astra Test: Functions
+fn add(int->a, int->b) -> int {
+    return a + b;
+}
+
+fn multiply(int->a, int->b) -> int {
+    return a * b;
+}
+
+fn factorial(int->n) -> int {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+fn fibonacci(int->n) -> int {
+    if (n <= 0) { return 0; }
+    if (n == 1) { return 1; }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+fn greet(str->name) -> void {
+    output(name);
+}
+
+fn main() -> int {
+    // Basic function calls
+    output(add(5, 3));         // 8
+    output(multiply(4, 7));    // 28
+
+    // Nested calls
+    output(add(multiply(2, 3), 4)); // 10
+
+    // Recursion
+    output(factorial(5));      // 120
+    output(factorial(10));     // 3628800
+
+    // Fibonacci
+    output(fibonacci(10));     // 55
+
+    // Void function
+    greet("Hello from a function!");
+
+    return 0;
+}

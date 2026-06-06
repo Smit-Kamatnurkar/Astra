@@ -1,0 +1,21 @@
+// Astra Test: Arithmetic operations
+fn main() -> int {
+    // Basic arithmetic
+    let int->a = 10;
+    let int->b = 3;
+
+    output(a + b);     // 13
+    output(a - b);     // 7
+    output(a * b);     // 30
+    output(a / b);     // 3
+    output(a % b);     // 1
+
+    // Operator precedence
+    output(2 + 3 * 4);      // 14
+    output((2 + 3) * 4);    // 20
+
+    // Negative numbers
+    output(-5 + 10);   // 5
+
+    return 0;
+}

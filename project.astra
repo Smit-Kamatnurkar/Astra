@@ -1,0 +1,12 @@
+// Astra project demo
+fn add(int->a, int->b) -> int {
+    return a + b;
+}
+
+fn main() -> int {
+    let int->a = 5;
+    let int->b = 10;
+    let int->res = add(a, b);
+    output(res);
+    return 0;
+}

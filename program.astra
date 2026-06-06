@@ -1,0 +1,10 @@
+// Classic Astra program
+fn add(int->a, int->b) -> int {
+    return a + b;
+}
+
+fn main() -> int {
+    let int->result = add(5, 3) * 2;
+    output(result);
+    return 0;
+}

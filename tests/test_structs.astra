@@ -1,0 +1,32 @@
+// Astra Test: Structs
+struct Point {
+    f64->x;
+    f64->y;
+}
+
+struct Rectangle {
+    f64->width;
+    f64->height;
+}
+
+fn main() -> int {
+    // Create and use struct
+    mut Point->p;
+    p.x = 3.0;
+    p.y = 4.0;
+    output(p.x);   // 3.0
+    output(p.y);   // 4.0
+
+    // Another struct
+    mut Rectangle->r;
+    r.width = 10.0;
+    r.height = 5.0;
+    output(r.width);   // 10.0
+    output(r.height);  // 5.0
+
+    // Compute with struct fields
+    let f64->area = r.width * r.height;
+    output(area);  // 50.0
+
+    return 0;
+}

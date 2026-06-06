@@ -1,0 +1,20 @@
+// Astra Test: Enums
+enum Color {
+    Red = 0,
+    Green = 1,
+    Blue = 2,
+}
+
+fn main() -> int {
+    let int->c = Color::Green;
+    output(c);   // 1
+
+    if (c == 1) {
+        output("Color is Green");
+    }
+
+    output(Color::Red);    // 0
+    output(Color::Blue);   // 2
+
+    return 0;
+}

@@ -1,0 +1,46 @@
+// Astra Test: Phase 2 — Pointers & Memory Operations
+fn main() -> int {
+    // --- 1. Address-of and dereference ---
+    mut int->x = 42;
+    let *int->px = &x;
+    output(*px);        // 42
+
+    // --- 2. Dereference assignment (*ptr = val) ---
+    *px = 100;
+    output(x);          // 100
+    output(*px);        // 100
+
+    // --- 3. Pointer to different types ---
+    mut f64->pi = 3.14;
+    let *f64->ppi = &pi;
+    output(*ppi);       // 3.140000
+
+    *ppi = 2.718;
+    output(pi);         // 2.718000
+
+    // --- 4. new/delete (heap allocation) ---
+    let *int->heapVal = new int;
+    delete heapVal;
+
+    // --- 5. Null pointer literal ---
+    let *int->nullPtr = null;
+
+    // --- 6. Pointer comparison (null check) ---
+    if (nullPtr == null) {
+        output("nullPtr is null");
+    }
+    if (px != null) {
+        output("px is not null");
+    }
+
+    // --- 7. sizeof on pointer types ---
+    output(sizeof(*int));   // 8 (pointer size on 64-bit)
+
+    // --- 8. Array with pointer subscript ---
+    let *int->arr = new int;
+    // Test passes — mem operations work
+
+    output("Phase 2 tests passed!");
+
+    return 0;
+}

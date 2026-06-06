@@ -1,0 +1,37 @@
+// Astra Test: Control Flow
+fn main() -> int {
+    // If-else
+    let int->x = 10;
+    if (x > 5) {
+        output("x is greater than 5");
+    } else {
+        output("x is not greater than 5");
+    }
+
+    // While loop
+    mut int->count = 0;
+    while (count < 5) {
+        output(count);
+        count = count + 1;
+    }
+
+    // For loop
+    output("For loop:");
+    for (mut int->i = 0; i < 5; i = i + 1) {
+        output(i);
+    }
+
+    // Nested if
+    let int->val = 15;
+    if (val > 20) {
+        output("over 20");
+    } else {
+        if (val > 10) {
+            output("between 11 and 20");
+        } else {
+            output("10 or under");
+        }
+    }
+
+    return 0;
+}

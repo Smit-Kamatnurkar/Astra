@@ -1,0 +1,47 @@
+// Astra Test: Phase 4 — Type System Enhancements
+
+// Top-level type alias
+using Integer = int;
+using Double = f64;
+using Byte = i8;
+
+fn addIntegers(Integer->a, Integer->b) -> Integer {
+    return a + b;
+}
+
+fn main() -> int {
+    // --- 1. using type alias for variables ---
+    let Integer->x = 42;
+    output(x);          // 42
+
+    let Double->pi = 3.14;
+    output(pi);         // 3.140000
+
+    // --- 2. Type alias in function call ---
+    output(addIntegers(10, 20));  // 30
+
+    // --- 3. auto type inference (integer) ---
+    let auto->a = 100;
+    output(a);          // 100
+
+    // --- 4. auto type inference (float) ---
+    let auto->b = 2.718;
+    output(b);          // 2.718000
+
+    // --- 5. auto with expression ---
+    let auto->c = a + 50;
+    output(c);          // 150
+
+    // --- 6. auto with mutable ---
+    mut auto->counter = 0;
+    counter = counter + 1;
+    output(counter);    // 1
+
+    // --- 7. Statement-level using ---
+    using BigInt = i64;
+    let BigInt->big = 1000000;
+    output(big);        // 1000000
+
+    output("Phase 4 tests passed!");
+    return 0;
+}
